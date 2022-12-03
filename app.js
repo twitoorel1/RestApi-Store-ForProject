@@ -6,13 +6,7 @@ const globalErrorHandler = require("./controllers/globalErrorHandler");
 const AppError = require("./utils/AppError");
 
 app.use(express.static("public"));
-app.use(
-  cors({
-    methods: ["GET", "POST"],
-    credentials: true,
-    origin: "http://localhost:8000",
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
