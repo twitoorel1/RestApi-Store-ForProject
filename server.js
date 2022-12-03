@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const app = require("./app");
 
-// const database_endpoint = "mongodb://localhost:27017/RestApi-Store";
 const database_endpoint = process.env.DB_CONNECT;
 
 mongoose
