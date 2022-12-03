@@ -1,3 +1,4 @@
+const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
 const app = require("./app");
 
@@ -8,5 +9,5 @@ mongoose
   .then(() => console.log("💻 MongoDB Connected"))
   .catch(() => console.log("Error"));
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`http://localhost:${port}`));
