@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 const app = require("./app");
 
 // const database_endpoint = "mongodb://localhost:27017/RestApi-Store";
-const database_endpoint =
-  "mongodb+srv://twitoorel1:Ot2521ot@cluster0.pu4qk.mongodb.net/RestApi-Store";
+const database_endpoint = process.env.DB_CONNECT;
 
 mongoose
   .connect(database_endpoint)
